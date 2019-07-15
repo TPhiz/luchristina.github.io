@@ -22,7 +22,7 @@
     //run when page has loaded
     $(document).ready(function() {
       //When the a list item is clicked, uncheck the input
-      $('#nav-list').click(function() {
+      $('nav.nav-list li a').click(function() {
         console.log('clicked!!!');
         $('input.nav-toggle').prop("checked", false);
       });
@@ -36,8 +36,8 @@
   <header>
     <h1 class="name"><a href="index.html">Christina Lu</a></h1>
     <input type="checkbox" id="nav-toggle" class="nav-toggle">
-    <nav>
-      <ul id="nav-list">
+    <nav class="nav-list">
+      <ul>
         <li><a href="#work">Work</a></li>
         <li><a href="#aboutme">About</a></li>
         <li><a href="https://drive.google.com/file/d/1wCWOfyhS38VDWT5JXVamANipbHL6C1UI/view?usp=sharing">Resume</a></li>
