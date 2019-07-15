@@ -3,11 +3,13 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>&#9996; Christina L</title>
+  <title>&#9996;&#127996; Christina & UX</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animate.css">
+  <script src="js/hamburger.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135477748-1"></script>
   <script>
@@ -16,6 +18,16 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-135477748-1');
+
+    //run when page has loaded
+    $(document).ready(function() {
+      //When the a list item is clicked, uncheck the input
+      $('#nav-list').click(function() {
+        console.log('clicked!!!');
+        $('input.nav-toggle').prop("checked", false);
+      });
+    });
+    
   </script>
   <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,800&display=swap" rel="stylesheet">
 </head>
@@ -25,7 +37,7 @@
     <h1 class="name"><a href="index.html">Christina Lu</a></h1>
     <input type="checkbox" id="nav-toggle" class="nav-toggle">
     <nav>
-      <ul>
+      <ul id="nav-list">
         <li><a href="#work">Work</a></li>
         <li><a href="#aboutme">About</a></li>
         <li><a href="https://drive.google.com/file/d/1wCWOfyhS38VDWT5JXVamANipbHL6C1UI/view?usp=sharing">Resume</a></li>
@@ -34,8 +46,6 @@
     </nav>
     <label for="nav-toggle" class="nav-toggle-label">
       <span></span>
-    </label>
-    <label for="nav-toggle" class="nav-toggle-label-off">
     </label>
   </header>
 
